@@ -2,10 +2,12 @@ import React from 'react';
 import ProjectsItem from './ProjectsItem/ProjectsItem';
 import { Container } from './Projects.styled';
 import { projectsDate } from '../../components/DataJSON/projectsDate';
+import { ScrollToTop } from '../ScrollToTop/ScrollToTop';
 
 export default function Projects() {
   return (
     <Container>
+      <ScrollToTop />
       {
         projectsDate.map(({ id, title, image, description, techSkills, githubLink, siteLink }) => {
           return (
