@@ -12,7 +12,7 @@ export const ProjectContainer = styled(motion.div)`
   min-height: 640px;
   max-height: 90vh;
   color: ${({ theme }) =>
-    theme.colors.accentText};
+    theme.colors.textColor};
 
     @media (min-width: 1024px) {
       flex-direction: row;

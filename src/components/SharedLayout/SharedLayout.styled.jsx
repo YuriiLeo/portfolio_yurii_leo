@@ -4,6 +4,7 @@ export const BodyWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 20px 0;
   min-height: 100vh;
   background: ${({ theme }) => theme.colors.background};
 `;

@@ -39,6 +39,7 @@ export const Logo = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 1;
 `;
 export const List = styled.ul`
       display: flex;
@@ -144,6 +145,7 @@ export const BtnClouse = styled.button`
 export const DarkLight = styled.div`
   display: flex;
   align-items: center;
+  z-index: 1;
 
   & div {
     height: 40px;
