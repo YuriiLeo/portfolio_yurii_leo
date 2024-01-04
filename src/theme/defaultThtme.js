@@ -13,7 +13,7 @@ export const defaultTheme = {
 export const darkTheme = {
   colors: {
     textColor: "#fffc00",
-    accentText: "#fffc00",
+    accentText: "#a9b9c4",
     background: "#1A1A1A",
     basicBackground: ['linear-gradient(to right, rgba(189, 195, 199, 0.6), rgba(44, 62, 80, 0.6)););'],
     mobileDetailBackground: ['linear-gradient(to right, rgba(15, 32, 39, 0.9), rgba(32, 58, 67, 0.9), rgba(44, 83, 100, 0.9));'],

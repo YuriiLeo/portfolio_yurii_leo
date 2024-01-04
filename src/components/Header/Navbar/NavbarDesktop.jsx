@@ -1,7 +1,6 @@
 import React from "react";
 import { navLinks } from "../../DataJSON/navLink";
 import { Item, Link, List, Menu } from "./Navbar.styled";
-import ThemeToggle from "../../ThemeToggle/ThemeToggle";
 
 export default function NavbarDesktop({ CloseModal }) {
   return (
@@ -15,7 +14,6 @@ export default function NavbarDesktop({ CloseModal }) {
           ))}
         </List>
       </Menu>
-      <ThemeToggle />
     </>
   );
 }

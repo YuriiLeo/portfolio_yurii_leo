@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../../components/Footer/Footer";
 import { Header } from "../../components/Header/Header";
 import { Suspense, useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
@@ -26,7 +25,6 @@ export const SharedLayout = () => {
         <Suspense fallback={null}>
           <Outlet />
         </Suspense>
-        <Footer />
       </BodyWrapper>
     </>
   );

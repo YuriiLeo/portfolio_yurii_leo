@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation } from 'framer-motion';
 
+import my_photo from "../../assets/img/my-photo.webp"
 import { Outlet } from "react-router-dom";
 
 import {
@@ -61,7 +62,7 @@ export default function HomePage() {
             >
               <div>
                 <img
-                  src="https://cdn.pixabay.com/photo/2017/06/09/09/39/adler-2386314_960_720.jpg"
+                  src={my_photo}
                   alt="photo1"
                 />
               </div>
@@ -126,68 +127,6 @@ export default function HomePage() {
         </motion.div>
         <Outlet />
       </GridContainer>
-      {/* <GridContainer>
-        <div>
-          <Item>
-            <h2>
-              Welcome to my portfolio
-            </h2>
-          </Item>
-          <PhotoItem>
-            <ThemeToggleWrapper>
-              <ThemeToggle />
-            </ThemeToggleWrapper>
-            <LinkAbout
-              to="about"
-            >
-              <div>
-                <img
-                  src="https://cdn.pixabay.com/photo/2017/06/09/09/39/adler-2386314_960_720.jpg"
-                  alt="photo1"
-                />
-              </div>
-              <div>
-                <h3>I'm Yurii Leonteko</h3>
-                <p>Full Stack developer</p>
-              </div>
-            </LinkAbout>
-          </PhotoItem>
-          <Item
-            style={{
-              gridColumn: "span 2",
-            }}
-          >
-            <LinkStaled to="projects">
-              <ProjectIcon />
-              <h2>Projects</h2>
-            </LinkStaled>
-          </Item>
-          <Item>
-            <LinkStaled to="resume">
-              <ResumeIcon />
-              <h2>Resume</h2>
-            </LinkStaled>
-          </Item>
-          <Item>
-            <LinkStaled to="contact">
-              <ContactIcon />
-              <h2>Contact</h2>
-            </LinkStaled>
-          </Item>
-          <Item
-            style={{
-              gridColumn: "span 3 / span 3",
-            }}
-          >
-            <LinkStaled to="skills">
-              <SkillsIcon />
-              <h2>Skills</h2>
-            </LinkStaled>
-            <IconList />
-          </Item>
-        </div>
-        <Outlet />
-      </GridContainer> */}
     </ContainerHome>
   );
 }
