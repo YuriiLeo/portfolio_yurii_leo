@@ -2,8 +2,9 @@ import React from "react";
 
 import { useMediaQuery } from "react-responsive";
 import { Link, NavBar, Logo, Wrapper } from "./Navbar.styled";
-import NavbarMobile from "./NavbarMobile";
 import NavbarDesktop from "./NavbarDesktop";
+import { NavbarMobile } from "./NavbarMobile/NavbarMobile";
+import ThemeToggle from "../../ThemeToggle/ThemeToggle";
 
 export default function Naavigation() {
   const isMobile = useMediaQuery({
@@ -17,6 +18,7 @@ export default function Naavigation() {
             <Link to="/">YL</Link>
           </span>
         </Logo>
+        <ThemeToggle />
         {isMobile ? (
           <NavbarMobile />
         ) : (
