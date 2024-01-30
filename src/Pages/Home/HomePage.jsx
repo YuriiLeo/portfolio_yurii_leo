@@ -57,9 +57,7 @@ export default function HomePage() {
             <ThemeToggleWrapper>
               <ThemeToggle />
             </ThemeToggleWrapper>
-            <LinkAbout
-              to="about"
-            >
+            <LinkAbout>
               <div>
                 <img
                   src={my_photo}
@@ -93,9 +91,9 @@ export default function HomePage() {
             animate={controls}
             transition={{ duration: 0.5, delay: 1.1 }}
             whileHover={{ scale: 1.05 }}>
-            <LinkStaled to="resume">
+            <LinkStaled to="about">
               <ResumeIcon />
-              <h2>Resume</h2>
+              <h2>About</h2>
             </LinkStaled>
           </Item>
           <Item
