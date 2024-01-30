@@ -10,6 +10,8 @@ export const Navigation = styled(motion.nav)`
     bottom: 0;
     width: 100vw;
     height: 500px;
+        background: ${({ theme }) =>
+    theme.colors.mobileDetailBackground};
 `;
 
 export const Background = styled(motion.div)`
@@ -68,10 +70,12 @@ export const ButtonToggle = styled.button`
     -ms-user-select: none;
     cursor: pointer;
     position: absolute;
-    top: 18px;
+    top: 15px;
     right: 15px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background: transparent;
+    color: ${({ theme }) => theme.colors.textColor};
+
 `;

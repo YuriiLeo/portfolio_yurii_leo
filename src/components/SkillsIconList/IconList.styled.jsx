@@ -6,9 +6,13 @@ export const IconsWrapper = styled.div`
 export const Icons = styled.div`
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
+
+    @media (min-width: 1024px) {
+    gap: 1.5rem;
+  }
 `;
 
 export const IconLink = styled.a`

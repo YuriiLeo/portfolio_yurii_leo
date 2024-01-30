@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Container } from "../../components/Container/Container.styled";
+import { ResumeIcon } from "../../assets/Icons/Project";
 
 export const ContainerHome = styled(Container)`
   margin-top: 2%;
@@ -23,7 +24,7 @@ export const GridContainer = styled.header`
   gap: 1.25rem 0;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 
-  @media (min-width: 769px) {
+  @media (min-width: 768px) {
     gap: 1.25rem;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -43,11 +44,11 @@ export const Item = styled.div`
   padding: 1.5rem;
   opacity: 0.9;
 
-  @media (min-width: 426px) and (max-width: 768px) {
+  @media (min-width: 426px) and (max-width: 767px) {
     padding: 2rem 4rem;
   }
 
-  @media (min-width: 769px) {
+  @media (min-width: 768px) {
     grid-column: auto;
   }
 
@@ -106,18 +107,18 @@ export const Item = styled.div`
   }
 
   & h2 {
-    font-size: 38px;
-    line-height: 1.5;
+    font-size: 30px;
+    line-height: 1.1;
     text-align: center;
 
-    @media (min-width: 769px) and (max-width: 1024px) {
-      font-size: 30px;
+    @media (min-width: 1200px) {
+      font-size: 38px;
     }
   }
 `;
 
 export const FirstItem = styled(Item)`
-  @media (max-width: 768px) {
+  @media (max-width: 769px) {
     grid-column: span 4;
   }
 `;
@@ -141,17 +142,27 @@ export const PhotoItem = styled(Item)`
 export const LinkStaled = styled(Link)`
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 3rem;
 
-  @media (min-width: 769px) {
+  @media (min-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
+    gap: 1rem;
   }
 
   & svg {
     height: 2.5em;
+
+    &:hover {
+    fill: ${({ theme }) =>
+    theme.colors.accentText};
+    
+    stroke: ${({ theme }) =>
+    theme.colors.accentText};
+    }
   }
 `;
+
 
 export const LinkAbout = styled(LinkStaled)`
   flex-direction: column;

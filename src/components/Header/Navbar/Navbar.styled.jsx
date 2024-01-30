@@ -35,12 +35,35 @@ export const Wrapper = styled.div`
   }
   
 `;
-export const Logo = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1;
+// export const Logo = styled.div`
+//     position: relative;
+//     width: 40px;
+//     height: 40px;
+
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     z-index: 1;
+// `;'
+
+export const Logo = styled(NavLink)`
+width: 30px;
+height: 30px;
+z-index: 10;
+    & svg {
+      color: ${({ theme }) => theme.colors.textColor};
+      cursor: pointer;
+
+  &:hover {
+    fill: ${({ theme }) =>
+    theme.colors.accentText};
+    
+    stroke: ${({ theme }) =>
+    theme.colors.accentText};
+    }
+    }
 `;
+
 export const List = styled.ul`
       display: flex;
       justify-content: space-evenly;
@@ -161,6 +184,14 @@ export const DarkLight = styled.div`
       width: 22px;
       height: 22px;
       cursor: pointer;
+
+  &:hover {
+    fill: ${({ theme }) =>
+    theme.colors.accentText};
+    
+    stroke: ${({ theme }) =>
+    theme.colors.accentText};
+    }
     }
   }
 `;
@@ -183,4 +214,17 @@ export const Link = styled(NavLink)`
 
     color: white;
   }
+`;
+
+export const FirstLater = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+`;
+
+export const SecondLater = styled.div`
+    position: absolute;
+    top: 4px;
+    left: 10px;
+  
 `;
