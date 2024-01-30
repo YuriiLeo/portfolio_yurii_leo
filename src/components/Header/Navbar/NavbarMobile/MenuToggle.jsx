@@ -4,9 +4,9 @@ import { ButtonToggle } from "./NavbarMobile.styled";
 
 const Path = props => (
     <motion.path
-        fill="transparent"
+        fill="currentColor"
         strokeWidth="3"
-        stroke="hsl(0, 0%, 18%)"
+        stroke="currentColor"
         strokeLinecap="round"
         {...props}
     />
