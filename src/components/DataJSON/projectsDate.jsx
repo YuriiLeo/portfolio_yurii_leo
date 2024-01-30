@@ -25,7 +25,7 @@ export const projectsDate = [
       "Styled Components"
     ],
     "githubLink": "https://github.com/YuriiLeo/movie-search-react",
-    "siteLink": "yuriileo.github.io/movie-search-react/"
+    "siteLink": "https://yuriileo.github.io/movie-search-react/"
   },
   {
     "id": 3,
@@ -43,6 +43,6 @@ export const projectsDate = [
     "description": "Ice Cream company site. Neat and tasty design, responsible layout. ",
     "techSkills": ["HTML", "Parcel", "SCSS", "JS"],
     "githubLink": "https://github.com/YuriiLeo/ice_cream_new",
-    "siteLink": "yuriileo.github.io/ice_cream_new/"
+    "siteLink": "https://yuriileo.github.io/ice_cream_new/"
   },
 ]

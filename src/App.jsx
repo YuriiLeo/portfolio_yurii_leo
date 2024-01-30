@@ -13,8 +13,8 @@ export const App = () => {
   return (
     <>
       <Routes>
+        <Route path="/" element={<HomePage />} />
         <Route element={<SharedLayout />}>
-          <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
