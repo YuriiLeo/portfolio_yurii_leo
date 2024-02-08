@@ -24,101 +24,85 @@ export const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
 
-      @media (min-width: 768px) {
-       padding-left: 40px;
-      padding-right: 40px;
+  @media (min-width: 768px) {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
-        @media (min-width: 1280px) {
-       padding-left: 50px;
-       padding-right: 50px;
+  @media (min-width: 1280px) {
+    padding-left: 50px;
+    padding-right: 50px;
   }
-  
 `;
-// export const Logo = styled.div`
-//     position: relative;
-//     width: 40px;
-//     height: 40px;
-
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     z-index: 1;
-// `;'
 
 export const Logo = styled(NavLink)`
-width: 30px;
-height: 30px;
-z-index: 10;
-    & svg {
-      color: ${({ theme }) => theme.colors.textColor};
-      cursor: pointer;
+  width: 30px;
+  height: 30px;
+  z-index: 10;
+  & svg {
+    color: ${({ theme }) => theme.colors.textColor};
+    cursor: pointer;
 
-  &:hover {
-    fill: ${({ theme }) =>
-    theme.colors.accentText};
-    
-    stroke: ${({ theme }) =>
-    theme.colors.accentText};
+    &:hover {
+      fill: ${({ theme }) => theme.colors.accentText};
+
+      stroke: ${({ theme }) => theme.colors.accentText};
     }
-    }
+  }
 `;
 
 export const List = styled.ul`
-      display: flex;
-      justify-content: space-evenly;
-    
+  display: flex;
+  justify-content: space-evenly;
 
-    @media (max-width: 767px) {
-      flex-direction: column;
-      align-items: center;
-      padding-top: 60px;
-    }
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+  }
 `;
 
 export const Item = styled.li`
-      
-      list-style: none;
+  list-style: none;
 
-      @media (max-width: 767) {
-        margin-top: 30px;
+  @media (max-width: 767) {
+    margin-top: 30px;
+  }
+
+  & a {
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    color: ${({ theme }) => theme.colors.textColor};
+
+    text-decoration: none;
+    padding: 10px;
+
+    @media (max-width: 767px) {
+      display: block;
+      font-size: 45px;
+      margin-top: 30px;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+        color: red;
       }
-      
-      & a {
-        position: relative;
-        font-size: 20px;
-        font-weight: 500;
-        color: ${({ theme }) => theme.colors.textColor};
+    }
 
-        text-decoration: none;
-        padding: 10px;
-
-        @media (max-width: 767px) {
-          display: block;
-          font-size: 45px;
-          margin-top: 30px;
-        }
-
-        &:hover {
-          &::before {
-            opacity: 1;
-            color: red;
-          }
-        }
-
-        &::before {
-          content: "";
-          position: absolute;
-          left: 50%;
-          bottom: 0;
-          transform: translateX(-50%);
-          height: 6px;
-          width: 6px;
-          border-radius: 50%;
-          transition: all 0.5s ease;
-        }
-      }
-  
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      height: 6px;
+      width: 6px;
+      border-radius: 50%;
+      transition: all 0.5s ease;
+    }
+  }
 `;
 
 export const Menu = styled.nav`
@@ -129,7 +113,6 @@ export const Menu = styled.nav`
     align-items: center;
     justify-content: space-between;
   }
-
 
   @media (max-width: 767px) {
     position: fixed;
@@ -143,7 +126,7 @@ export const Menu = styled.nav`
     z-index: 100;
     transition: all 1s ease;
   }
-    @media (min-width: 768px) {
+  @media (min-width: 768px) {
     width: 520px;
   }
 `;
@@ -165,18 +148,25 @@ export const BtnClouse = styled.button`
     cursor: pointer;
   }
 `;
+
+export const ThemeToggleWrapper = styled.div`
+  @media (max-width: 767px) {
+    position: absolute;
+    left: calc(50% - 15px);
+    z-index: 11;
+  }
+`;
 export const DarkLight = styled.div`
   display: flex;
   align-items: center;
   z-index: 1;
 
   & div {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 5px;
 
     & svg {
       position: absolute;
@@ -185,13 +175,11 @@ export const DarkLight = styled.div`
       height: 22px;
       cursor: pointer;
 
-  &:hover {
-    fill: ${({ theme }) =>
-    theme.colors.accentText};
-    
-    stroke: ${({ theme }) =>
-    theme.colors.accentText};
-    }
+      &:hover {
+        fill: ${({ theme }) => theme.colors.accentText};
+
+        stroke: ${({ theme }) => theme.colors.accentText};
+      }
     }
   }
 `;
@@ -210,21 +198,20 @@ export const Link = styled(NavLink)`
   }
 
   &.active {
-  -webkit-text-fill-color: white;
+    -webkit-text-fill-color: white;
 
     color: white;
   }
 `;
 
 export const FirstLater = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 `;
 
 export const SecondLater = styled.div`
-    position: absolute;
-    top: 4px;
-    left: 10px;
-  
+  position: absolute;
+  top: 4px;
+  left: 10px;
 `;

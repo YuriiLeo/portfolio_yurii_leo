@@ -1,8 +1,5 @@
 import styled from "styled-components";
 
-export const IconsWrapper = styled.div`
-`;
-
 export const Icons = styled.div`
   display: flex;
   align-items: center;
@@ -10,12 +7,12 @@ export const Icons = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 
-    @media (min-width: 1024px) {
+  @media (min-width: 1024px) {
     gap: 1.5rem;
   }
 `;
 
-export const IconLink = styled.a`
+export const IconWrapper = styled.div`
   & svg {
     height: 2.5rem;
     width: 2.5rem;
@@ -29,8 +26,7 @@ export const IconLink = styled.a`
   &:hover {
     transform: scale(1.1);
     svg {
-      fill: ${({ color }) =>
-    color};
+      fill: ${({ color }) => color};
     }
   }
 `;

@@ -1,29 +1,20 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  color: ${({ theme }) =>
+    theme.colors.textColor};
+    
   max-width: 1400px;
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
 
+  margin-top: 90px;
+  margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
 
-
-  @media (min-width: 1280px) {
-       padding-left: 50px;
-       padding-right: 50px;
-  }
-`;
-
-export const ProjectsContainer = styled(Container)`
-      color: ${({ theme }) =>
-    theme.colors.textColor};
-    
-    margin-top: 90px;
-    margin-bottom: 40px;
-    
-  h2 {
+    h2 {
     font-family: "Eczar";
     font-style: normal;
     font-weight: 700;
@@ -36,4 +27,11 @@ export const ProjectsContainer = styled(Container)`
     }
 
   }
+
+
+  @media (min-width: 1280px) {
+       padding-left: 50px;
+       padding-right: 50px;
+  }
 `;
+

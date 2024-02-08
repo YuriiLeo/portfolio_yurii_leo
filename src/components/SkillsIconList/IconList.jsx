@@ -11,7 +11,7 @@ import {
   TypeScriptIcon,
 } from "../../assets/Icons/Project";
 import {
-  IconLink,
+  IconWrapper,
   Icons,
   IconsWrapper,
 } from "./IconList.styled";
@@ -20,60 +20,51 @@ export default function IconList() {
   return (
     <IconsWrapper>
       <Icons>
-        <IconLink
+        <IconWrapper
           color="#F7DF1E"
-          href="http://www.w3.org/2000/svg"
         >
           <JavaScriptIcon />
-        </IconLink>
-        <IconLink
+        </IconWrapper>
+        <IconWrapper
           color="#E34F26"
-          href="http://www.w3.org/2000/svg"
         >
           <HTML5Icon />
-        </IconLink>
-        <IconLink
+        </IconWrapper>
+        <IconWrapper
           color="#1572B6"
-          href="http://www.w3.org/2000/svg"
         >
           <CSS3Icon />
-        </IconLink>
-        <IconLink
+        </IconWrapper>
+        <IconWrapper
           color="#61DAFB"
-          href="http://www.w3.org/2000/svg"
         >
           <ReactIcon />
-        </IconLink>
-        <IconLink
+        </IconWrapper>
+        <IconWrapper
           color="#339933"
-          href="http://www.w3.org/2000/svg"
         >
           <NodeJSIcon />
-        </IconLink>
-        <IconLink
+        </IconWrapper>
+        <IconWrapper
           color="#000000"
-          href="http://www.w3.org/2000/svg"
         >
           <NextJSIcon />
-        </IconLink>
-        <IconLink
+        </IconWrapper>
+        <IconWrapper
           color="#3178C6"
-          href="http://www.w3.org/2000/svg"
         >
           <TypeScriptIcon />
-        </IconLink>
-        <IconLink
+        </IconWrapper>
+        <IconWrapper
           color="#F05032"
-          href="http://www.w3.org/2000/svg"
         >
           <GitIcon />
-        </IconLink>
-        <IconLink
+        </IconWrapper>
+        <IconWrapper
           color="#764ABC"
-          href="http://www.w3.org/2000/svg"
         >
           <ReduxIcon />
-        </IconLink>
+        </IconWrapper>
       </Icons>
     </IconsWrapper>
   );

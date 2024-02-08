@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Container } from "../../components/Container/Container.styled";
-import { ResumeIcon } from "../../assets/Icons/Project";
 
 export const ContainerHome = styled(Container)`
   margin-top: 2%;
@@ -15,11 +14,12 @@ export const ContainerHome = styled(Container)`
 
 export const ThemeToggleWrapper = styled.div`
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 5px;
+  right: 5px;
 `;
 
 export const GridContainer = styled.header`
+  position: relative;
   display: grid;
   gap: 1.25rem 0;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -34,13 +34,38 @@ export const GridContainer = styled.header`
   }
 `;
 
+export const WrapperLangSwitch = styled.div`
+  position: absolute;
+  top: 170px;
+  left: 10px;
+  font-size: 1rem;
+  z-index: 1;
+
+  color: ${({ theme }) => theme.colors.textColor};
+
+  @media (min-width: 375px) {
+    font-size: 1.6rem;
+    top: 130px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.6rem;
+    top: 0;
+    background: ${({ theme }) =>
+    theme.colors.basicBackground};
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+`;
+
 export const Item = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
   grid-column: span 2 / span 2;
   border-radius: 1.5rem;
-  background: ${({ theme }) => theme.colors.basicBackground};
+  background: ${({ theme }) =>
+    theme.colors.basicBackground};
   padding: 1.5rem;
   opacity: 0.9;
 
@@ -56,7 +81,8 @@ export const Item = styled.div`
     padding: 2rem;
   }
 
-  &:hover, :focus {
+  &:hover,
+  :focus {
     transform: scale(1.05);
     cursor: pointer;
   }
@@ -66,6 +92,14 @@ export const Item = styled.div`
     grid-row: 1 / span 2;
     margin: auto;
     padding: 1rem;
+
+    @media (max-width: 375px) {
+      height: 144px;
+    }
+
+    @media (min-width: 376px) and (max-width: 768px) {
+      height: 107px;
+    }
 
     &:hover {
       cursor: default;
@@ -88,7 +122,8 @@ export const Item = styled.div`
   }
 
   &:last-child {
-    &:hover, :focus {
+    &:hover,
+    :focus {
       transform: scale(1);
       cursor: default;
     }
@@ -101,7 +136,8 @@ export const Item = styled.div`
   }
 
   & > h2 {
-    background: ${({ theme }) => theme.colors.basicBackground};
+    background: ${({ theme }) =>
+    theme.colors.basicBackground};
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -129,9 +165,16 @@ export const PhotoItem = styled(Item)`
   display: flex;
   padding: 2rem;
 
-  &:hover, :focus {
-    transform: scale(1);
+  &:hover,
+  :focus {
     cursor: default;
+  }
+
+  & a {
+    &:hover,
+    :focus {
+      cursor: default;
+    }
   }
 
   @media (min-width: 768px) {
@@ -152,19 +195,21 @@ export const LinkStaled = styled(Link)`
 
   & svg {
     height: 2.5em;
+  }
 
+  &:nth-last-child(1) {
     &:hover {
-    fill: ${({ theme }) =>
-    theme.colors.accentText};
-    
-    stroke: ${({ theme }) =>
-    theme.colors.accentText};
+      color: ${({ theme }) => theme.colors.accentText};
+
+      fill: ${({ theme }) => theme.colors.accentText};
+
+      stroke: ${({ theme }) => theme.colors.accentText};
     }
   }
 `;
 
-
-export const LinkAbout = styled(LinkStaled)`
+export const MyInfo = styled.div`
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
@@ -205,4 +250,3 @@ export const LinkAbout = styled(LinkStaled)`
     }
   }
 `;
-
