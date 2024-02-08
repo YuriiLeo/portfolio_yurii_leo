@@ -1,14 +1,19 @@
 import React from "react"
-import { ProjectsContainer } from "../../components/Container/Container.styled"
+import { DefaultPageStyled, WrapperLangSwitch } from "./DefaultPageContainer.styled"
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher"
+
 
 
 export const DefaultPageContainer = ({ children, title }) => {
     return (
         <>
-            <ProjectsContainer>
+            <DefaultPageStyled>
                 {title && <h2>{title}</h2>}
+                <WrapperLangSwitch>
+                    <LanguageSwitcher />
+                </WrapperLangSwitch>
                 {children}
-            </ProjectsContainer>
+            </DefaultPageStyled>
         </>
 
     )
