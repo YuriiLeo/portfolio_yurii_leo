@@ -1,23 +1,24 @@
 import React from 'react'
-import { AboutContainer, Info } from './AboutPage.styled'
+import { Info } from './AboutPage.styled'
 import IconList from '../../components/SkillsIconList/IconList'
+import { useTranslation } from 'react-i18next';
+import { DefaultPageContainer } from '../../components/DefaultPageContainer/DefaultPageContainer';
 
 export default function About() {
+  const { t } = useTranslation();
   return (
-    <AboutContainer title={"About Me"}>
+    <DefaultPageContainer title={t('about-title')}>
       <Info>
-        <p>
-          Hey there! I'm Yuriy, a Full Stack Developer driven by a lifelong fascination with technology and creativity. 💻🚀
-        </p>
-        <p>In my earlier years, I dedicated myself to professional sports, achieving commendable results.</p>
-        <p>However, my unwavering passion for technology and a keen interest in development led me back to the dynamic world of IT.</p>
-        <p>Solving complex problems is a natural forte of mine, honed through years of experience.</p>
-        <p>Let's join forces and explore how my diverse background, coupled with a relentless passion for development, can elevate and ensure the success of your projects! 🌐🚀</p>
+        <p>{t('about-bio-paragraph-one')}</p>
+        <p>{t('about-bio-paragraph-two')}</p>
+        <p>{t('about-bio-paragraph-three')}</p>
+        <p>{t('about-bio-paragraph-four')}</p>
+        <p>{t('about-bio-paragraph-five')}</p>
         <div>
-          <p>Here are some of the things I am good at</p>
+          <p>{t('about-skills')}</p>
           <IconList />
         </div>
       </Info>
-    </AboutContainer>
+    </DefaultPageContainer>
   )
 }

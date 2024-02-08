@@ -1,10 +1,13 @@
 import React from 'react'
 import { DefaultPageContainer } from '../../components/DefaultPageContainer/DefaultPageContainer'
 import Projects from '../../components/Projects/Projects'
+import { useTranslation } from 'react-i18next'
 
 export default function ProjectsPage() {
+  const { t } = useTranslation();
+
   return (
-    <DefaultPageContainer title={"My Project"}>
+    <DefaultPageContainer title={t('projects-title')}>
       <Projects />
     </DefaultPageContainer>
   )

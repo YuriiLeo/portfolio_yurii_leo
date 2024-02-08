@@ -1,7 +1,5 @@
 import * as React from "react";
-import { motion } from "framer-motion";
 import { MenuItem } from "./MenuItem";
-import { navLinks } from "../../../DataJSON/navLink";
 import { List } from "./NavbarMobile.styled";
 
 const variants = {
@@ -13,7 +11,7 @@ const variants = {
     }
 };
 
-export const NavigationList = ({ toggle }) => (
+export const NavigationList = ({ navLinks, toggle }) => (
     <List
         variants={variants}>
         {navLinks.map((el, index) => (

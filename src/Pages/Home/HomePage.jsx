@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation } from 'framer-motion';
+import { useTranslation } from 'react-i18next'
 
 import my_photo from "../../assets/img/my-photo.webp"
 import { Outlet } from "react-router-dom";
@@ -8,10 +9,11 @@ import {
   ContainerHome,
   GridContainer,
   Item,
-  LinkAbout,
   LinkStaled,
+  MyInfo,
   PhotoItem,
   ThemeToggleWrapper,
+  WrapperLangSwitch,
 } from "./HomePage.styled";
 import IconList from "../../components/SkillsIconList/IconList";
 import {
@@ -21,10 +23,12 @@ import {
   SkillsIcon,
 } from "../../assets/Icons/Project";
 import ThemeToggle from "../../components/ThemeToggle/ThemeToggle";
+import LanguageSwitcher from "../../components/LanguageSwitcher/LanguageSwitcher";
 
 export default function HomePage() {
   const ref = useRef(null);
   const controls = useAnimation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (ref.current) {
@@ -45,9 +49,11 @@ export default function HomePage() {
             initial={{ opacity: 0, x: -150 }}
             animate={controls}
             transition={{ duration: 0.5, delay: 0.5 }}>
-            <motion.h2>
-              Welcome to my portfolio
-            </motion.h2>
+            <motion.h2>{t('welcome')}</motion.h2>
+            <WrapperLangSwitch>
+              <LanguageSwitcher />
+            </WrapperLangSwitch>
+
           </Item>
           <PhotoItem
             as={motion.div}
@@ -57,7 +63,7 @@ export default function HomePage() {
             <ThemeToggleWrapper>
               <ThemeToggle />
             </ThemeToggleWrapper>
-            <LinkAbout>
+            <MyInfo>
               <div>
                 <img
                   src={my_photo}
@@ -65,10 +71,10 @@ export default function HomePage() {
                 />
               </div>
               <div>
-                <h3>I'm Yurii Leonteko</h3>
-                <p>Full Stack developer</p>
+                <h3>{t('who-im')}</h3>
+                <p>{t('my-position')}</p>
               </div>
-            </LinkAbout>
+            </MyInfo>
           </PhotoItem>
           <Item
             as={motion.div}
@@ -80,10 +86,11 @@ export default function HomePage() {
               gridColumn: "span 2",
             }}
           >
-            <LinkStaled to="projects">
-              <ProjectIcon />
-              <h2>Projects</h2>
+            <LinkStaled to="about">
+              <ResumeIcon />
+              <h2>{t('nav-about')}</h2>
             </LinkStaled>
+
           </Item>
           <Item
             as={motion.div}
@@ -91,9 +98,9 @@ export default function HomePage() {
             animate={controls}
             transition={{ duration: 0.5, delay: 1.1 }}
             whileHover={{ scale: 1.05 }}>
-            <LinkStaled to="about">
-              <ResumeIcon />
-              <h2>About</h2>
+            <LinkStaled to="projects">
+              <ProjectIcon />
+              <h2>{t('nav-projects')}</h2>
             </LinkStaled>
           </Item>
           <Item
@@ -102,9 +109,9 @@ export default function HomePage() {
             animate={controls}
             transition={{ duration: 0.5, delay: 1.5 }}
             whileHover={{ scale: 1.05 }}>
-            <LinkStaled to="contact">
+            <LinkStaled to="contacts">
               <ContactIcon />
-              <h2>Contact</h2>
+              <h2>{t('nav-contacts')}</h2>
             </LinkStaled>
           </Item>
           <Item
@@ -116,9 +123,9 @@ export default function HomePage() {
               gridColumn: "span 3 / span 3",
             }}
           >
-            <LinkStaled to="skills">
+            <LinkStaled>
               <SkillsIcon />
-              <h2>Skills</h2>
+              <h2>{t('nav-skills')}</h2>
             </LinkStaled>
             <IconList />
           </Item>
