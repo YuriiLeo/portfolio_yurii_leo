@@ -1,4 +1,3 @@
-import React from 'react';
 import ProjectsItem from './ProjectsItem/ProjectsItem';
 import { Container } from './Projects.styled';
 import { ScrollToTop } from '../ScrollToTop/ScrollToTop';

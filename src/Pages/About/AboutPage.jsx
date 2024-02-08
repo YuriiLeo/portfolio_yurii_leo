@@ -1,4 +1,3 @@
-import React from 'react'
 import { Info } from './AboutPage.styled'
 import IconList from '../../components/SkillsIconList/IconList'
 import { useTranslation } from 'react-i18next';

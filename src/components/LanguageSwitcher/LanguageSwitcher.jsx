@@ -1,5 +1,3 @@
-import React from "react";
-
 import i18next from 'i18next'
 import { Button, ListItem, Text } from "./LanguageSwitcher.styled";
 

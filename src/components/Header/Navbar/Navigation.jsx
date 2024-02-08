@@ -1,4 +1,3 @@
-import React from "react";
 import { useMediaQuery } from "react-responsive";
 import { NavBar, Logo, Wrapper, ThemeToggleWrapper } from "./Navbar.styled";
 import NavbarDesktop from "./NavbarDesktop";

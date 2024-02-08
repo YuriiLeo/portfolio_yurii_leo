@@ -1,4 +1,3 @@
-import React from 'react'
 import { DefaultPageContainer } from '../../components/DefaultPageContainer/DefaultPageContainer'
 import Projects from '../../components/Projects/Projects'
 import { useTranslation } from 'react-i18next'

@@ -1,4 +1,3 @@
-import React from 'react'
 import { ContactDetails, ContactLink, StyledLinkItem, GridContainer, ContactInfoItem, StyledLink } from './ContactPage.styled'
 import { Outlet } from 'react-router-dom'
 import { ContactUs } from '../../components/ContactForm/ContactForm'
