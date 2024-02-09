@@ -46,7 +46,7 @@ const translation = {
     'my-name': 'Yurii Leontenko',
     'my-location': 'Krakow, Poland',
     'contacts-action-email': 'Send email',
-    'contacts-action-resume': 'Download resume',
+    'contacts-action-resume': 'Download CV',
 }
 
 export default translation;

@@ -50,7 +50,7 @@ export default function ContactPage() {
                     <span> Linkedin</span>
                   </ContactLink>
                 </StyledLinkItem>
-                <StyledLinkItem href="https://drive.google.com/file/d/10WTVBfas9Yb8JIHw1T1i6Ujg9aljeZ7F/view?usp=sharing" target="_blank" >
+                <StyledLinkItem to="https://drive.google.com/file/d/1OQOb0i9chf4LPKODrZTQnIqW8uPu-DQZ/view?usp=sharing" target="_blank" >
                   <ContactLink  >
                     <span>{t('contacts-action-resume')}</span>
                   </ContactLink>
