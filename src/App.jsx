@@ -5,7 +5,6 @@ import About from "./Pages/About/AboutPage";
 import ContactPage from "./Pages/Contact/ContactPage";
 import NotFound from "./Pages/NotFound/NotFound";
 import ProjectsPage from "./Pages/Projects/ProjectsPage"
-import Resume from "./Pages/Resume/ResumePage"
 import { SharedLayout } from "./components/SharedLayout/SharedLayot";
 
 import { I18nextProvider } from 'react-i18next';
@@ -21,7 +20,6 @@ export const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contacts" element={<ContactPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
-            <Route path="/resume" element={<Resume />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
