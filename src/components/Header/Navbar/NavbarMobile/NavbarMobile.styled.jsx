@@ -9,20 +9,22 @@ export const Navigation = styled(motion.nav)`
   bottom: 0;
   width: 100vw;
   height: 500px;
-
-  background: ${({ theme }) =>
-    theme.colors.mobileDetailBackground};
 `;
 
 export const List = styled(motion.ul)`
   position: absolute;
-  top: 100px;
-  width: 95%;
+  top: 70px;
+  width: 100%;
+  height: 430px;
   display: flex;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   flex-direction: column;
   align-items: center;
+  gap: 30px;
   padding-top: 60px;
+
+  background: ${({ theme }) =>
+    theme.colors.mobileDetailBackground};
 `;
 
 export const Item = styled(motion.li)`

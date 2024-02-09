@@ -153,7 +153,7 @@ export const ProjectDetailsContainer = styled(motion.div)`
   }  
 `;
 
-export const IntroName = styled.h2`
+export const IntroName = styled.h3`
     font-size: 24px;
     font-weight: 800;
     margin: 0;
