@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 import { ThemeProvider } from "styled-components";
 import { defaultTheme, darkTheme } from "./defaultThtme";
 import { useDispatch, useSelector } from "react-redux";
@@ -26,4 +26,9 @@ export const Theme = ({ children }) => {
       {children}
     </ThemeProvider>
   );
+};
+
+
+Theme.propTypes = {
+  children: PropTypes.node.isRequired,
 };

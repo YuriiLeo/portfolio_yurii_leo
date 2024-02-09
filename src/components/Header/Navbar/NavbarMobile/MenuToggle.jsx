@@ -1,4 +1,5 @@
-import * as React from "react";
+import PropTypes from "prop-types";
+
 import { motion } from "framer-motion";
 import { ButtonToggle } from "./NavbarMobile.styled";
 
@@ -39,3 +40,7 @@ export const MenuToggle = ({ toggle }) => (
         </svg>
     </ButtonToggle>
 );
+
+MenuToggle.propTypes = {
+    toggle: PropTypes.func.isRequired
+};

@@ -1,4 +1,4 @@
-import React from "react"
+import PropTypes from "prop-types";
 import { DefaultPageStyled, WrapperLangSwitch } from "./DefaultPageContainer.styled"
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher"
 
@@ -18,3 +18,8 @@ export const DefaultPageContainer = ({ children, title }) => {
 
     )
 }
+
+DefaultPageContainer.propTypes = {
+    children: PropTypes.node.isRequired,
+    title: PropTypes.string
+};

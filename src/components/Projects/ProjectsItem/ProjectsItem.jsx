@@ -1,4 +1,5 @@
-import React from 'react'
+import PropTypes from "prop-types";
+
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { Image, ImageOverlay, IntroName, LinksContainer, ProjectContainer, ProjectDetailsContainer, ProjectImageContainer, RevealOnScroll, SkillsContainer } from './ProjectsItem.styled';
 import { Link } from 'react-router-dom';
@@ -73,3 +74,12 @@ export default function ProjectsItem({ title, img, description, techSkills, gith
     </>
   )
 }
+
+ProjectsItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  techSkills: PropTypes.arrayOf(PropTypes.string).isRequired,
+  githubLink: PropTypes.string.isRequired,
+  siteLink: PropTypes.string.isRequired,
+};

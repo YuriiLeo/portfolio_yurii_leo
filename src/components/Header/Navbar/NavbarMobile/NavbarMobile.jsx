@@ -1,4 +1,5 @@
-import * as React from "react";
+import PropTypes from "prop-types";
+
 import { useRef } from "react";
 import { useCycle } from "framer-motion";
 import { useDimensions } from "./use-dimensions";
@@ -52,4 +53,8 @@ export const NavbarMobile = ({ navLinks }) => {
             </Navigation>
         </>
     );
+};
+
+NavbarMobile.propTypes = {
+    navLinks: PropTypes.arrayOf().isRequired,
 };

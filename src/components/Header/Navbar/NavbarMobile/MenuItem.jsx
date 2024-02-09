@@ -1,4 +1,5 @@
-import * as React from "react";
+import PropTypes from "prop-types";
+
 import { Item, Link } from "./NavbarMobile.styled";
 
 const variants = {
@@ -29,4 +30,10 @@ export const MenuItem = ({ to, text, toggle }) => {
             <Link to={to} >{text}</Link>
         </Item>
     );
+};
+
+MenuItem.propTypes = {
+    to: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    toggle: PropTypes.func.isRequired
 };

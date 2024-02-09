@@ -1,4 +1,5 @@
-import * as React from "react";
+import PropTypes from "prop-types";
+
 import { MenuItem } from "./MenuItem";
 import { List } from "./NavbarMobile.styled";
 
@@ -20,3 +21,12 @@ export const NavigationList = ({ navLinks, toggle }) => (
     </List>
 );
 
+NavigationList.propTypes = {
+    navLinks: PropTypes.arrayOf(
+        PropTypes.shape({
+            path: PropTypes.string.isRequired,
+            text: PropTypes.string.isRequired
+        })
+    ).isRequired,
+    toggle: PropTypes.func.isRequired
+};
