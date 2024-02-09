@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { Item, Link, List, Menu } from "./Navbar.styled";
 
 export default function NavbarDesktop({ navLinks, CloseModal }) {
-  console.log("navLinks", navLinks);
   return (
     <>
       <Menu>

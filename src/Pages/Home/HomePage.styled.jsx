@@ -5,6 +5,7 @@ import { Container } from "../../components/Container/Container.styled";
 export const ContainerHome = styled(Container)`
   margin-top: 2%;
   color: ${({ theme }) => theme.colors.textColor};
+      background-color: ${({ theme }) => theme.colors.background};
 
   @media (min-width: 1280px) {
     padding-left: 150px;
@@ -41,8 +42,12 @@ export const WrapperLangSwitch = styled.div`
   font-size: 1rem;
   z-index: 1;
 
-  color: ${({ theme }) => theme.colors.textColor};
+    & span {
+      &.active {
+     -webkit-text-fill-color: ${({ theme }) => theme.colors.textColor};
 
+    color: ${({ theme }) => theme.colors.textColor};
+      }}
   @media (min-width: 375px) {
     font-size: 1.6rem;
     top: 130px;
